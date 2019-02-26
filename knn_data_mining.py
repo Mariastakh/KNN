@@ -146,9 +146,10 @@ def knn(trainingSetData, testSetData, k):
 
     # Calculating euclidean distance between each row of training data and test data instance
     for testInstance in range(len(testSet)):  # len(testSet)
-
-        testInstance = testSet.iloc[testInstance]  # sum the testInstance row
-
+    
+        # Store current test Point:
+        testInstance = testSet.iloc[testInstance]  
+        
         distances = euclideanDistanceRow(testInstance, trainingSet)
 
         # sort the distances in order of smallest first:
